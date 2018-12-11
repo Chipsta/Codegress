@@ -5,7 +5,7 @@
 	</head>
 	<body>
 		<h1>Register</h1>
-		<form>
+		<form name="my-form" onsubmit="return sayCongrats()">
 			<div>
 				<!-- First name -->
 				<label for="First Name">First Name:</label>
@@ -28,13 +28,13 @@
 			<div>
 				<!-- Email and password -->
 				<label for="Email">Email:</label>
-				<input id="Email" type="email" name="Email" placeholder="Your@email.com">
+				<input id="Email" type="email" name="Email" placeholder="Your@email.com" required>
 				<label for="password">Password:</label>
 				<input id="password" type="password" name="password" placeholder="your password" required>
 			</div>
 
 			<div>
-				<label for="month">Birthday</label>
+				<label for="month">Month</label>
 				<select name="month" id="month" >
 					<option value="January">1	</option>
 					<option value="February">2	</option>
@@ -49,14 +49,64 @@
 					<option value="November">11 </option>
 					<option value="December">12 </option>
 				</select>
+
+				<label for="Day">Day</label>
+				<select name="Day">
+					<option value="Day">1</option>
+				</select>
+				
+				<label for="Year">Year</label>
+				<select name="Year">
+					<option value="Year">1980</option>
+					<option value="Year">1981</option>
+					<option value="Year">1982</option>
+					<option value="Year">1983</option>
+					<option value="Year">1984</option>
+					<option value="Year">1985</option>
+					<option value="Year">1986</option>
+					<option value="Year">1987</option>
+					<option value="Year">1988</option>
+					<option value="Year">1989</option>
+
+				</select>
 			</div>
 
 			<div>
 				<label for="agree">I agree to the terms and conditions</label>
-				<input id="agree" type="radio" name="agree" value="agree">
+				<input id="agree" type="radio" name="agree" value="agree" required>
 			</div>
 
-				<input type="submit">
+				<button onclick="return validateForm()">Submit</button>
 		</form>
+	<script type="text/javascript">
+		// List of names of each of your inputs
+		var formNames = ['First Name'/* index - 0*/, 'Last Name'/* index - 1*/, 'Email'/* index - 2*/, 'password'/* index - 3*/, 'agree'/* index - 4*/];
+		
+		// This function will be called everytime someone tries to submit or click submit
+		function validateForm() {
+			// counter starts at 0 and will go up 1 everytime the loop loops
+		  let counter = 0;
+
+		  // while counter is less than the length of the "formNames"
+		  while(counter < formNames.length) { // formNames.length is five
+		  	// our current name which grabs the index in the formNames array from above ^
+		  	const currentName = formNames[counter]; // at index - 0 equals "First Name"
+		  	
+		  	// checks to see if if "my-form" > currentName's value is an empty string
+		  	if(document.forms["my-form"][currentName].value === '') { // "==="" equals "strict" comparison for example: (1 === '1') => equals false
+		  		alert(currentName + " must be filled out"); // alert
+		  		break; // breaks out while loop
+		  	}
+		  	// increments the counter variable - equivalent to counter = counter + 1 - which is equivalent to counter += 1
+		  	counter++;
+		  }
+
+		  // returns out of the function
+		}
+
+		function sayCongrats() {
+			alert('congrats you passed the first test! \n You\'re Hired!')
+		}
+	</script>
 	</body>
 </html>
