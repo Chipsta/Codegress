@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Form Demo
+	</title>
+</head>
+<body>
+	<h1>Login</h1>
+<!-- <form action - where the form send data to method - what http method (get/post) -->
+<!-- 	<form>
+<label>
+	Username:	
+	<input name="username" type="text" placeholder="username">
+</label>	
+
+<label>
+	Password:
+	<input name="password" type="password" placeholder="password">
+</label>	
+	<input type="submit" >
+	</form>
+</body>
+</html> -->
+
+	<form action="http://wikipedia.org">
+<label for="username">Email:</label>	
+	<input id="username" name="username" type="email" placeholder="username" required>
+	<!-- changed the label from username to Email, and the type from username to email, to text out the browser requirements. -->
+
+
+<label for="password">Password:</label>	
+	<input id="password" name="password" type="password" placeholder="password" required>
+	<input type="submit" >
+	</form>
+</body>
+</html>
+
+<!-- Label tags are really important. Explain what each part of the form is used for. create a label for every input -->
+
+<!-- Validation * required attribute validates that an input is not empty. * There are also type validations. Try changing "type" from "text" to "email". -->
