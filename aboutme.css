@@ -1,9 +1,45 @@
 h1 {
-	color: red;
+	color: rgba(255,0,0,1);
+	border-color: purple;
+	border-width: 5px;
+	border-style: solid;
 }	
 li {
-	color: green;
+	color: rgba(250,250,0,1);
 }
 h4 {
-	color: purple;
+	color: rgba(25,250,100,1);
 }
+h4	{
+	background: rgba(25,100,200,.2);
+}
+body {
+	background: url("wildtextures-creased-gilded-decorative-paper-texture.jpg");
+}
+
+
+
+
+
+/* Background : url(http://www.graphocsbeam.com/whatever/20)
+background-repeat: no repeat;
+background-size: cover;*/
+/*Decimal - Base 10
+0,1,2,3,4,5,6,7,8,9
+*/
+/*Binary - Base 2
+0,1
+*/
+/*Hexadecimal- Base 16
+0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F
+Red Green Blue
+__   __    __
+
+
+RGB - base 10
+rgb(0,255,0)
+rgb(100,0,100)
+rgb(11,99,150)
+rgba ( how transparrent is a:alpha)
+.0 - 1.
+*/

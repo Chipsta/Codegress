@@ -1,0 +1,10 @@
+li {
+	border: 2px red solid ;
+}
+#important {
+	background: yellow;
+	text-decoration: line-through;
+}
+.secondary {
+	background: pink;
+}
